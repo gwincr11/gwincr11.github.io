@@ -7,7 +7,7 @@
             <input type="text" name="adjective1" placeholder="adjective"></input> 
         </div>
         <!-- Button for the user to click when submiting the form -->
-        <input type="submit"></input>
+        <input type="submit" />
     </form>
 </section>
 
