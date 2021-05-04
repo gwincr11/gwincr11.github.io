@@ -1,6 +1,6 @@
 <section id="user-input">
     <!--- This is the main user input section a form tag wraps the inputs we want to collect -->
-    <form action="." method="get">
+    <form method="get">
         <div>
             <!-- This is a single input, it has a label and a input field for the user to enter information into. The name signifies the variable the input will be stored in -->
             <label for="adjective1">Adjective</label>
