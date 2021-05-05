@@ -20,4 +20,15 @@
 <!-- We will be putting code inside of script to handle the logic of how to handle the madlib population -->
 <script>
 
+$("#user-input").find("form").submit(function(event) {
+    event.preventDefault();
+    entries = $(this).serializeArray()
+    console.log(entries)
+    entries.forEach(function(entry) {
+        console.log("-----entry------")
+        console.log(entry)
+        $("#" + entry["name"]).text(entry["value"])
+    })
+})
+
 </script>
