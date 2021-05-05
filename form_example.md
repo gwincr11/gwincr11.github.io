@@ -4,7 +4,7 @@
         <div>
             <!-- This is a single input, it has a label and a input field for the user to enter information into. The name signifies the variable the input will be stored in -->
             <label for="adjective1">Adjective</label>
-            <input type="text" name="adjective1" placeholder="adjective"></input> 
+            <input type="text" name="adjective1" placeholder="adjective" />
         </div>
         <!-- Button for the user to click when submiting the form -->
         <input type="submit" />
