@@ -23,10 +23,8 @@
 $("#user-input").find("form").submit(function(event) {
     event.preventDefault();
     entries = $(this).serializeArray()
-    console.log(entries)
+
     entries.forEach(function(entry) {
-        console.log("-----entry------")
-        console.log(entry)
         $("#" + entry["name"]).text(entry["value"])
     })
 })
