@@ -20,13 +20,15 @@
 <!-- We will be putting code inside of script to handle the logic of how to handle the madlib population -->
 <script>
 
-$("#user-input").find("form").submit(function(event) {
+function add_value(entry) {
+  $("#" + entry["name"]).text(entry["value"])
+}
+
+function submit_event(event) {
     event.preventDefault();
-    entries = $(this).serializeArray()
+    var entries = $(this).serializeArray()
+    entries.forEach(add_value(entry))
+}
 
-    entries.forEach(function(entry) {
-        $("#" + entry["name"]).text(entry["value"])
-    })
-})
-
+$("#user-input").find("form").submit(submit_event(event))
 </script>
