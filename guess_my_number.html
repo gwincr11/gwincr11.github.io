@@ -10,28 +10,36 @@
   crossorigin="anonymous"></script>
 <script>
 
+    // Select the elements we need to interact with
     var game = $('#game');
     var higher = $('#higher');
     var lower = $('#');
+    // Set the initial values for game
     var cpu_guess = 0;
     var ceiling = 100;
     var floor = 1;
 
+    // The guess was to high lower the ceiling below the guess
     function lower(guess) {
         ceiling = guess - 1;
     }
    
+    // The guessing function
     function guess_cpu() {
         cpu_guess = Math.floor(Math.random() * (ceiling - floor) + floor);
         guess.textContent = cpu_guess;
     }
 
+    // The higher button was clicked, now what to do?
     higher.addEventListener('click', function() {
 
     });
 
+    // The lower button was clicked, now what to do?
     lower.addEventListener('click', function() {
+        // lower the ceiling
         lower(guess);
+        // Guess again with the new ceiling
         guess_cpu();
     });
     guess_cpu();
