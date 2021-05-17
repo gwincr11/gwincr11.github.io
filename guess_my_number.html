@@ -26,7 +26,9 @@
    
     // The guessing function
     function guess_cpu() {
+        // Random number between the floor and ceiling
         cpu_guess = Math.floor(Math.random() * (ceiling - floor) + floor);
+        // Update the guess in the DOM, so the user can see it.
         guess.textContent = cpu_guess;
     }
 
