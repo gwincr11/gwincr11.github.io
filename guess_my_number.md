@@ -7,7 +7,6 @@
 
 <script>
 
-document.addEventListener('load', function(e) {
     var game = document.querySelector('#game');
     var higher = document.querySelector('#higher');
     var lower = document.querySelector('#lower');
@@ -29,5 +28,4 @@ document.addEventListener('load', function(e) {
 
     });
     cpu_guess();
-})
 </script>
