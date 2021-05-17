@@ -10,16 +10,19 @@
   crossorigin="anonymous"></script>
 <script>
 
-    var game = document.querySelector('#game');
-    var higher = document.querySelector('#higher');
-    var lower = document.querySelector('#lower');
-    var guess = document.querySelector('#guess');
+    var game = $('#game');
+    var higher = $('#higher');
+    var lower = $('#');
+    var cpu_guess = 0;
     var ceiling = 100;
     var floor = 1;
 
+    function lower(guess) {
+        ceiling = guess - 1;
+    }
    
     function guess_cpu() {
-        cpu_guess = Math.floor(Math.random() * ceiling);
+        cpu_guess = Math.floor(Math.random() * (ceiling - floor) + floor);
         guess.textContent = cpu_guess;
     }
 
@@ -28,7 +31,8 @@
     });
 
     lower.addEventListener('click', function() {
-
+        lower(guess);
+        guess_cpu();
     });
-    cpu_guess();
+    guess_cpu();
 </script>
